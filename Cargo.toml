@@ -1,0 +1,12 @@
+[package]
+name = "luacompile"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "luacompile"
+crate-type = ["cdylib"]
+
+[dependencies]
+mlua = { version = "0.9", features = ["luajit", "vendored"] }
+pyo3 = { version = "0.20", features = ["extension-module"] }
